@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body,html {
+    width: 100%;
+    height: 100vh;
+    background: #130b21;
+    color: #fff;
+}
+
+nav {
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem 0 8rem;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+#logo h2 {
+    text-transform: uppercase;
+
+}
+
+.navigation {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.1rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.page1,
+.page2,
+.page3,
+.page4,
+.page5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+
+
+}
+
+.main {
+    height: calc(100vh - 5rem);
+    display: flex;
+
+}
+
+.main .left,
+.main .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 8rem;
+
+}
+
+.main.right {
+    padding: 2rem 8rem 2rem 2rem;
+}
+.main .left h1{
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    width: 90%;
+
+}
+.main .left p{
+    position: relative;
+    width: 90%;
+}
+ .main .right img{
+    position: absolute;
+    width: 30rem;
+    z-index: 10;
+ }
+ button{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+
+ }
+ .btn button{
+    padding: 1rem 2rem 1rem 2rem;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1rem;
+ }
+
+.imageBox {
+    position: relative;
+    display: flex;
+
+    height: 3rem;
+}
+
+.imageBox img {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: var(--left);
+    object-fit: cover;
+
+}
+/*second page styles*/
+.page2,.page3,.page4{
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+.page2 h1,.page3 h1{
+    
+    font-size: 3rem;
+    font-weight: 500;
+
+}
+.container{
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30rem;
+}
+.innerbox{
+    display: flex;
+    gap: 1rem;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+}
+.page2 .box1{
+    width: 14rem;
+    height: 6rem;
+    background: #54535c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: var(--opa);
+    flex-shrink: 0;
+
+}
+.box i{
+    font-size: 3rem;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+/*third page styles*/
+.whiteBtn{
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+
+}
+.box{
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: start;
+}
+.box .left,
+.box .mid,
+.box .right{
+    position: relative;
+    background: #54535c;
+    border-radius: 20px;
+    padding: 2rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+    cursor: pointer;
+    
+
+}
+.box .left{
+    width: 50%;
+    height: 20rem;
+}
+.box .mid,.box .right{
+    width: 25%;
+    height: 20rem;
+}
+.left .top{
+    height: 80%;
+}
+.mid .top,.right .top{
+    position: relative;
+    height: 70%;
+}
+.top img{
+    
+    width: 100%;
+    
+}
+.mid h3,.right h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+.box .left:hover,
+.box .mid:hover,
+.box .right:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    background: linear-gradient(145deg,#5b5a63,#48474f);
+}
+.mid:hover img,
+.right:hover img{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
